@@ -1,4 +1,4 @@
-{% set version = '0.6' %}
+{% set version = "0.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mbest_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mbest/mbest_{{ version }}.tar.gz
-  sha256: 7da32aa465f95d9ff1018e72a87cfe84252bbd3ccfd81e302f4319098b3f0ef4
+  sha256: b0f408c57ef7671657f745373db7de1338eec4501cba7a66c5d9c13c3d9ed20f
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -54,10 +54,7 @@ test:
 about:
   home: https://github.com/patperry/r-mbest
   license: Apache-2.0
-  summary: Fast moment-based hierarchical model fitting. Implements methods from the papers "Fast
-    Moment-Based Estimation for Hierarchical Models," by Perry (2017) and "Fitting a
-    Deeply Nested Hierarchical Model to a Large Book Review Dataset Using a Moment-Based
-    Estimator," by Zhang, Schmaus, and Perry (2018).
+  summary: Fast moment-based hierarchical model fitting. Implements methods from the papers "Fast Moment-Based Estimation for Hierarchical Models," by Perry (2017) and "Fitting a Deeply Nested Hierarchical Model to a Large Book Review Dataset Using a Moment-Based Estimator," by Zhang, Schmaus, and Perry (2018).
   license_family: APACHE
   license_file:
     - LICENSE
